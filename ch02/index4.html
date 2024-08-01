@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+        li{
+          background-color: #f9f9f9;
+          margin: 8px 0;
+          padding: 10px;
+          border: 1px solid #ccc;  
+        }
+    </style>
+</head>
+<body>
+    <h1>요소를 동적으로 삭제하기</h1>
+    <button onclick="removeItem()">아이템 삭제</button>
+    <br>
+    <ul id="myList">
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+    </ul>
+    <script>
+        function removeItem(){
+            // 1. 요소 들고 오기(요소=노드)
+            let list = document.querySelector("#myList");
+            
+            // 2. 마지막 자식이 있을 경우, 삭제합니다.(ul의 하위 요소->li)
+            let lastChild = list.lastElementChild;
+
+            // 3. 삭제 처리 --> 해당 요소에 removeChild 메서드 사용
+            // (매개변수는 해당 노드를 넣어주자.)
+            if(lastChild){
+                //lastChild 요소가 있으면 true, 없으면 false 반환
+                list.removeChild(lastChild);
+            } else{
+                alert("더이상 자식이 존재하지 않습니다.");
+            }
+
+        }
+    </script>
+</body>
+</html>

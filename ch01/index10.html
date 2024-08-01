@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>index2.html 파일입니다.</h2>
+    <h1 id="title">Hello,world!</h1>
+    <button id="changeButton">Change Text</button>
+<script>
+    // 자바스크립트를 사용하여 DOM을 조작해보자.
+    // button 요소 id값인 changebutton 노트에 접근해보기
+   let changeBtn=document.getElementById("changeButton");
+   console.log(typeof changeBtn);
+   console.log(changeBtn);
+
+    // 함수 표현식 - 함수를 변수 안에 저장하는 법
+    let clickEvent=function(){
+        let titleElement=document.getElementById("title");
+        titleElement.textContent="안녕 스크립트야!";
+        titleElement.style.color="red";
+    };
+
+   // 이벤트 리스너를 등록해보자.
+   changeBtn.addEventListener("click",clickEvent);
+</script>
+</body>
+</html>

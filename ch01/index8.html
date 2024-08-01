@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2>index8.html 파일입니다.</H2>
+    <SCRIPT>
+
+        // 1. 매개 변수가 없는 표현식을 정의해보자.
+        const currentTime=function(){
+            const now = new Date();
+            return now.toLocalTimeString();
+        };
+
+        // 출력 결과를 잘 확인해 보자.
+        console.log(currentTime);
+
+        // 주의! 결과에 대한 분석을 통해 이해해보자.
+        // 주의! 결과에 대한 분석을 통해 이해해보자.
+        const time=currentTime();
+        console.log("--------");
+        console.log(time);
+
+        // 2. 
+        const add=function(x,y){
+            return x+y;
+        }
+
+        console.log(add(3,5));
+
+        const result = add (10,20);
+        console.log(result);
+
+    </SCRIPT>
+</body>
+</html>
+
+// 2. 
+const add=function(x,y){
+ 
+ 
+    console.log(add(3,5));
+    return x+y;
+}

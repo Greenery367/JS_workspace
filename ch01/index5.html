@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2>INDEX5.HTML 파일입니다.</H2>
+    <SCRIPT>
+       // ES6 - 객체 리터럴 표기법
+       const person = {
+        firstName: "길동",
+        lastName: "홍",
+        age: 30,
+        address: {
+            street: '연수로 123번길',
+            city: '부산',
+            zip: "33123"
+        }, // 객체 속의 객체 -> 중첩 객체!
+        hobbies: ['독서','등산','요리','코딩'], // 배열
+        sayHello: function(){
+            // alert('안녕');
+            // 백틱 사용 - //ES6 - 템플릿 리터럴 -> ${}
+            console.log('Hello, My name is ${this.firstName} ${this.lastName}입니다');
+        }
+       };
+
+       // 객체 속성에 접근하기
+       console.log(person.firstName);
+       console.log(person.lastName);
+
+       // 중첩된 객체 속성에 접근하기
+       console.log(person);
+
+       // 배열 속성 0번 인덱스 접근
+       console.log(pserson.hobbies[0]);
+
+       // 객체의 메서드 호출
+       console.log(person.sayHello);
+       person.sayHello();
+
+       console.log("----------");
+
+       // 해당하는 객체에 새로운 속성을 추가하고 싶다면?
+
+       // 객체에 속성 추가
+       person.email ="a@naver.com";
+       console.log(person.email);
+       // 객체의 상태값 변경
+       person.age=100;
+       console.log(person.age);
+
+       // 객체 속성을 삭제해보자.
+       delete person.hobbies;
+       console.log(person.hobbies);
+
+    </SCRIPT>
+</body>
+</html>
